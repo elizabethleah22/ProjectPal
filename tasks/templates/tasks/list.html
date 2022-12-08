@@ -1,34 +1,33 @@
 {% extends 'base.html' %}
 
 {% block title %}
-Tracker
+    Tracker
 {% endblock title %}
-
 {% block content %}
-<main>
-    <div>
-        <h1>My Tasks</h1>
-        {% if tasks|length > 0 %}
-            <table>
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Start Date</th>
-                        <th>Due Date</th>
-                        <th>Is completed</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {% for task in tasks %}
-                    <tr>
-                        <td>{{ task.name }}</td>
-                        <td>{{ task.start_date }}</td>
-                        <td>{{ task.due_date }}</td>
-                        <td>{{ task.is_completed|yesno }}</td>
-                    </tr>
-                    {% endfor %}
-                </tbody>
-            </table>
+    <main>
+        <div>
+            <h1>My Tasks</h1>
+            {% if tasks|length > 0 %}
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Start Date</th>
+                            <th>Due Date</th>
+                            <th>Is completed</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for task in tasks %}
+                            <tr>
+                                <td>{{ task.name }}</td>
+                                <td>{{ task.start_date }}</td>
+                                <td>{{ task.due_date }}</td>
+                                <td>{{ task.is_completed|yesno }}</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
             {% else %}
                 <p>You have no tasks</p>
             {% endif %}

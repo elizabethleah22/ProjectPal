@@ -4,6 +4,8 @@ from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth.models import User
 
 # Create your views here.
+
+
 def user_login(request):
     if request.method == "POST":
         form = LoginForm(request.POST)

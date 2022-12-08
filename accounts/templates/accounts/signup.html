@@ -1,18 +1,17 @@
 {% extends 'base.html' %}
 
 {% block title %}
-Sign Up - My Projects
+    Sign Up - My Projects
 {% endblock title %}
-
 {% block content %}
-<main>
-    <div>
-        <h1>Sign up</h1>
-        <form method="post">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <button>Sign up</button>
-        </form>
-    </div>
-</main>
+    <main>
+        <div>
+            <h1>Sign up</h1>
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button>Sign up</button>
+            </form>
+        </div>
+    </main>
 {% endblock content %}
