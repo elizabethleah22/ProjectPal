@@ -12,6 +12,8 @@
         </title>
     </head>
     <body>
+        {% block content %}
+        {% endblock content %}
         <header>
             <nav>
                 <ul>
@@ -33,8 +35,8 @@
                             <a href="{% url 'signup' %}">Signup</a>
                         </li>
                     {% endif %}
-                    {% block content %}
-                    {% endblock content %}
-                </header>
-            </body>
-        </html>
+                </ul>
+            </nav>
+        </header>
+    </body>
+</html>
